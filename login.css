@@ -1,0 +1,123 @@
+body {
+    font-family: 'Merriweather', serif; /* Fonte mais legível para o corpo */
+    background-image: url('https://placehold.co/1200x800/E0C9A6/4B3621?text=Pergaminho+Antigo'); /* Fundo de pergaminho */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #3A2B1D; /* Fallback */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #4B3621; /* Cor de texto padrão */
+}
+
+.login-container {
+    background-color: rgba(20, 15, 12, 0.9); /* Fundo muito escuro e semi-transparente */
+    border: 1px solid #5A442C; /* Borda mais sutil */
+    padding: 40px 50px; /* Mais padding para um visual espaçoso */
+    border-radius: 12px; /* Cantos mais suaves */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Sombra mais profunda e suave */
+    width: 100%;
+    max-width: 480px; /* Ligeiramente mais largo */
+    text-align: center;
+    backdrop-filter: blur(2px); /* Efeito de desfoque sutil no fundo */
+}
+
+.login-title {
+    font-family: 'Cinzel', serif; /* Fonte elegante para o título */
+    color: #D4AF37; /* Cor de ouro */
+    margin-bottom: 35px; /* Mais espaçamento */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra mais refinada */
+    font-size: 3em; /* Tamanho do título */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Mais espaçamento entre os campos */
+}
+
+.login-form input {
+    padding: 14px 20px; /* Mais padding nos inputs */
+    border: 1px solid #5A442C;
+    background-color: rgba(40, 30, 25, 0.7); /* Fundo do input mais escuro e sutil */
+    color: #E0C9A6; /* Cor do texto do input */
+    border-radius: 8px; /* Cantos arredondados */
+    font-size: 1.05em; /* Tamanho da fonte ligeiramente maior */
+    font-family: 'Merriweather', serif;
+    outline: none;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4); /* Sombra interna sutil */
+    transition: all 0.3s ease; /* Transição suave para foco */
+}
+
+.login-form input::placeholder {
+    color: #8B735C; /* Cor do placeholder */
+    opacity: 0.8; /* Levemente transparente */
+}
+
+.login-form input:focus {
+    border-color: #D4AF37; /* Borda dourada ao focar */
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6), inset 0 2px 5px rgba(0, 0, 0, 0.4); /* Sombra e brilho mais pronunciados */
+    background-color: rgba(50, 40, 35, 0.8); /* Fundo ligeiramente mais claro ao focar */
+}
+
+.login-form button {
+    padding: 14px 25px; /* Mais padding nos botões */
+    background: linear-gradient(to bottom, #8B4513, #6B350F); /* Gradiente sutil */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.15em; /* Fonte maior */
+    font-family: 'Cinzel', serif; /* Fonte mais robusta para botões */
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Transição suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra do botão */
+    margin-top: 15px; /* Mais espaçamento */
+}
+
+.login-form button:hover {
+    background: linear-gradient(to bottom, #A0522D, #8B4513); /* Gradiente mais claro no hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.8); /* Sombra e brilho mais intensos */
+    transform: translateY(-2px); /* Leve levantamento no hover */
+}
+
+.login-form .guest-button {
+    background: linear-gradient(to bottom, #5A442C, #4A3A28); /* Gradiente para botão de convidado */
+    margin-top: 5px; /* Menos espaçamento entre os botões */
+}
+
+.login-form .guest-button:hover {
+    background: linear-gradient(to bottom, #7A6048, #5A442C);
+}
+
+.error-message {
+    color: #FF7F50; /* Um tom de laranja mais suave para erros */
+    margin-top: 20px;
+    font-size: 0.95em;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 30px;
+        margin: 0 15px;
+        max-width: 100%; /* Ocupa a largura total em telas pequenas */
+    }
+    .login-title {
+        font-size: 2.2em;
+    }
+    .login-form input,
+    .login-form button {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+}

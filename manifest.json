@@ -1,0 +1,21 @@
+{
+  "name": "CoinFlip RPG",
+  "short_name": "CoinFlip",
+  "description": "Uma aventura RPG interativa de mesa onde o destino é decidido por uma moeda.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#3A2B1D",
+  "theme_color": "#4B3621",
+  "icons": [
+    {
+      "src": "coin-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "coin-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

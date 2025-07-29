@@ -1,0 +1,102 @@
+body {
+    font-family: 'Times New Roman', serif; /* Fonte mais clássica para RPG */
+    color: #4B3621; /* Cor de texto que lembra pergaminho/papel antigo */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Adiciona um padding geral para não colar nas bordas */
+    box-sizing: border-box;
+    /* Propriedades para o background-image fixo */
+    background-image: url('https://placehold.co/1200x800/E0C9A6/4B3621?text=Pergaminho+Antigo'); /* Imagem de pergaminho de placeholder */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    background-color: #3A2B1D; /* Cor de fallback caso a imagem não carregue */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+/* Estilo para o título principal */
+.game-title {
+    text-align: center;
+    color: #D4AF37; /* Cor de ouro para o título */
+    margin-bottom: 50px; /* Espaçamento abaixo do título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no título */
+    font-family: 'Georgia', serif; /* Fonte mais robusta para título */
+    font-size: 3.5em; /* Tamanho maior para o título central */
+    padding: 10px 20px;
+    background-color: rgba(44, 33, 26, 0.7); /* Fundo semi-transparente para o título */
+    border-radius: 10px;
+    border: 2px solid #8B4513;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Lista de Moedas --- */
+.coin-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as moedas quebrem a linha */
+    justify-content: center; /* Centraliza as moedas */
+    gap: 40px; /* Espaçamento entre as moedas */
+    padding: 30px;
+    background-color: rgba(44, 33, 26, 0.85); /* Fundo semi-transparente para a lista */
+    border-radius: 10px;
+    border: 2px solid #8B4513;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    max-width: 900px;
+    width: 100%;
+}
+
+.coin-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre a moeda e o texto */
+    color: #E0C9A6; /* Cor do texto da moeda */
+    font-weight: bold;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.coin {
+    width: 80px; /* Tamanho da moeda */
+    height: 80px;
+    border-radius: 50%; /* Forma circular */
+    border: 3px solid rgba(255, 255, 255, 0.5); /* Borda para efeito 3D */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.3); /* Sombra e brilho */
+    transition: transform 0.2s ease; /* Transição suave ao passar o mouse */
+    cursor: pointer;
+}
+
+.coin:hover {
+    transform: translateY(-5px) scale(1.05); /* Efeito de "levantar" ao passar o mouse */
+}
+
+/* Cores das Moedas */
+.green-coin { background-color: #4CAF50; } /* Estamina */
+.blue-coin { background-color: #2196F3; } /* Mana */
+.red-coin { background-color: #F44336; } /* Ataque */
+.lightblue-coin { background-color: #81D4FA; } /* Teleporte */
+.gold-coin { background-color: #FFD700; } /* Ressurreição */
+.white-coin { background-color: #FFFFFF; } /* XP */
+
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .game-title {
+        font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
+    }
+    .coin-list {
+        gap: 20px; /* Reduz o espaçamento entre moedas em telas menores */
+        padding: 20px;
+    }
+    .coin {
+        width: 60px; /* Reduz o tamanho da moeda em telas menores */
+        height: 60px;
+    }
+    .coin-item span {
+        font-size: 0.9em;
+    }
+}

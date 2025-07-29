@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinFlip RPG - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="login-title">Entrar na Aventura</h1>
+        <div class="login-form">
+            <input type="text" id="emailInput" placeholder="Seu e-mail de aventureiro" required>
+            <input type="password" id="passwordInput" placeholder="Sua senha secreta" required>
+            <button id="loginButton">Entrar</button>
+            <button id="anonymousLoginButton" class="guest-button">Entrar como Convidado</button>
+        </div>
+        <p id="errorMessage" class="error-message"></p>
+    </div>
+
+    <script type="module" src="login.js"></script>
+</body>
+</html>
